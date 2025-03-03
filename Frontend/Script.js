@@ -2,24 +2,20 @@
     const identificadorField = document.getElementById('identificador');
     const dataVendaField = document.getElementById('dataVenda');
 
-    // Generate a UUID for Identificador
     identificadorField.value = self.crypto.randomUUID();
 
-    // Set Data Venda to today's date
     const today = new Date().toISOString().split('T')[0];
     dataVendaField.value = today;
 });
 
-// Handle form submission
 document.getElementById('orderForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    // Gather form data
     const formData = {
         identificador: document.getElementById('identificador').value,
         dataVenda: document.getElementById('dataVenda').value,
         cliente: {
-            clienteId: self.crypto.randomUUID(), // Generate a UUID for clienteId
+            clienteId: self.crypto.randomUUID(),
             nome: document.getElementById('clienteNome').value,
             cpf: document.getElementById('clienteCPF').value,
             categoria: document.getElementById('clienteCategoria').value,
@@ -37,7 +33,6 @@ document.getElementById('orderForm').addEventListener('submit', async (event) =>
     const resultDiv = document.getElementById('result');
 
     try {
-        // Call your local API
         const response = await fetch('http://localhost:5292/api/vendas', {
             method: 'POST',
             headers: {

@@ -1,5 +1,4 @@
-﻿/* General Styles */
-body {
+﻿body {
     font-family: 'Roboto', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
@@ -27,7 +26,6 @@ h1 {
     text-align: center;
 }
 
-/* Form Group Styles */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -58,7 +56,6 @@ h1 {
             background-color: #fff;
         }
 
-/* Fieldset Styles */
 fieldset {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -72,7 +69,6 @@ fieldset {
         padding: 0 0.5rem;
     }
 
-/* Button Styles */
 .submit-button {
     width: 100%;
     padding: 0.75rem;
@@ -90,7 +86,6 @@ fieldset {
         background-color: #0056b3;
     }
 
-/* Result Styles */
 .result {
     margin-top: 1.5rem;
     padding: 1rem;
