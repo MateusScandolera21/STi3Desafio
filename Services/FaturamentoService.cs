@@ -26,8 +26,8 @@ namespace VendasAPI.Services
                 var requestBody = new
                 {
                     identificador = venda.Identificador,
-                    subTotal = Math.Round(subtotal, 2), // 2 casas decimais
-                    descontos = Math.Round(descontos, 2), // 2 casas decimais
+                    subTotal   = Math.Round(subtotal, 2), // 2 casas decimais
+                    descontos  = Math.Round(descontos, 2), // 2 casas decimais
                     valorTotal = Math.Round(venda.ValorTotal, 2), // 2 casas decimais
                     itens = venda.Itens.Select(i => new
                     {

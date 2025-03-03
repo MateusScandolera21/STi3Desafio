@@ -19,9 +19,9 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAllOrigins",
         builder =>
         {
-            builder.AllowAnyOrigin() // Allow requests from any origin
-                   .AllowAnyMethod() // Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
-                   .AllowAnyHeader(); // Allow all headers
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader(); 
         });
 });
 
@@ -37,13 +37,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Use CORS policy
 app.UseCors("AllowAllOrigins");
 
 app.UseHttpsRedirection();
 app.MapControllers();
 
-// Opcional: Adicionar dados iniciais para teste
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<VendasContext>();
