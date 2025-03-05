@@ -70,9 +70,20 @@
                 </div>
             </fieldset>
 
-            <button type="submit" class="submit-button">Submit</button>
+            <button type="submit" class="submit-button">Enviar</button>
+
+            <!-- Barra de carregamento -->
+            <div id="loadingBar" class="loading-bar">
+                <div class="loading-bar-progress"></div>
+            </div>
+
+            <!-- Label de status -->
+            <div id="statusLabel" class="status-label"></div>
         </form>
         <div id="result" class="result"></div>
+
+        <!-- Botão para recarregar a página -->
+        <button id="reloadButton" class="reload-button">Recarregar Página</button>
     </div>
     <script src="script.js"></script>
 </body>
